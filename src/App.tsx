@@ -27,7 +27,7 @@ const App: FC = (): JSX.Element => {
   }, []);
   return (
     <>
-      <div className="max-w-[810px]">
+      <div className="max-w-[820px]">
         <OverlayScrollbarsComponent>
           <div className="w-[800px] h-[500px]">
             {todos.map((todo, index) => (
@@ -40,7 +40,7 @@ const App: FC = (): JSX.Element => {
                 <p
                   style={{
                     textDecorationLine: todo.completed
-                      ? "line-through  "
+                      ? "line-through"
                       : "none",
                   }}
                   className="text-3xl ml-2"
