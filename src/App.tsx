@@ -27,29 +27,31 @@ const App: FC = (): JSX.Element => {
   }, []);
   return (
     <>
-      <OverlayScrollbarsComponent>
-        <div className="h-[300px]">
-          {todos.map((todo, index) => (
-            <div key={index} className="flex w-[800px] p-2 bg-red-600 mt-2">
-              <input
-                className="w-[36px] h-[36px]"
-                type="checkbox"
-                defaultChecked={todo.completed}
-              />
-              <p
-                style={{
-                  textDecorationLine: todo.completed
-                    ? "line-through  "
-                    : "none",
-                }}
-                className="text-3xl ml-2"
-              >
-                {todo.id}. {todo.title}
-              </p>
-            </div>
-          ))}
-        </div>
-      </OverlayScrollbarsComponent>
+      <div className="max-w-[810px]">
+        <OverlayScrollbarsComponent>
+          <div className="w-[800px] h-[500px]">
+            {todos.map((todo, index) => (
+              <div key={index} className="flex w-[800px] p-2 bg-red-600 mt-2">
+                <input
+                  className="w-[36px] h-[36px]"
+                  type="checkbox"
+                  defaultChecked={todo.completed}
+                />
+                <p
+                  style={{
+                    textDecorationLine: todo.completed
+                      ? "line-through  "
+                      : "none",
+                  }}
+                  className="text-3xl ml-2"
+                >
+                  {todo.id}. {todo.title}
+                </p>
+              </div>
+            ))}
+          </div>
+        </OverlayScrollbarsComponent>
+      </div>
     </>
   );
 };
