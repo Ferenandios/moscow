@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.os-scrollbar-vertical .os-scrollbar-handle {
+  min-height: 46px;
+  min-width: 12px;
+  background-image: url("/public/grab.svg");
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 0;
+}
